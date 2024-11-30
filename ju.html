@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучающий сайт</title>
+    <link rel="stylesheet" href="ju.css">
+</head>
+<body>
+    <header>
+        <h1>Обучающий сайт</h1>
+        <nav>
+            <button class="tab-button" data-tab="home">Главная</button>
+            <button class="tab-button" data-tab="tests">Тесты</button>
+            <button class="tab-button" data-tab="materials">Материалы</button>
+            <button class="tab-button" data-tab="results">Результаты</button>
+            <button class="tab-button" data-tab="settings">Настройки</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Главная: Каталог курсов -->
+        <section id="home" class="tab-content active">
+            <h2>Каталог курсов</h2>
+            <div class="courses-container">
+                <!-- Курсы будут добавляться динамически через JS -->
+            </div>
+        </section>
+
+        <!-- Учебные материалы -->
+        <section id="materials" class="tab-content hidden">
+            <h2>Учебные материалы</h2>
+            <div id="material-content" class="hidden">
+                <h3 id="course-title"></h3>
+                <p id="course-description"></p>
+                <div id="pdfs"></div>
+                <iframe id="video-frame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Тесты -->
+        <section id="tests" class="tab-content hidden">
+            <h2>Тесты</h2>
+            <p>Выберите тест:</p>
+            <ul id="test-list">
+                <!-- Тесты будут добавляться динамически через JS -->
+            </ul>
+        </section>
+
+        <!-- Результаты -->
+        <section id="results" class="tab-content hidden">
+            <h2>Результаты</h2>
+            <ul id="results-list">
+                <li>Нет данных</li>
+            </ul>
+        </section>
+
+        <!-- Настройки -->
+        <section id="settings" class="tab-content hidden">
+            <h2>Настройки</h2>
+            <form id="settings-form">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" placeholder="Введите имя">
+                <button type="button" onclick="saveSettings()">Сохранить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Обучающий сайт</p>
+    </footer>
+
+    <script src="ju.js"></script>
+</body>
+</html>
